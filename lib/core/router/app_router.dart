@@ -98,13 +98,14 @@ class RouterListenable extends _$RouterListenable
   String? redirect(BuildContext context, GoRouterState state) {
     // if (this.state.isLoading || this.state.hasError) return null;
 
-    final isIntro = state.uri.path == const IntroRoute().location;
-
-    if (!_introCompleted) {
-      return const IntroRoute().location;
-    } else if (isIntro) {
-      return const HomeRoute().location;
-    }
+    // final isIntro = state.uri.path == const IntroRoute().location;
+    // // _introCompleted = true;
+    // if (!_introCompleted) {
+    //   return const IntroRoute().location;
+    // } else if (isIntro) {
+    //   return const HomeRoute().location;
+    // }
+    return const HomeRoute().location;
 
     return null;
   }
